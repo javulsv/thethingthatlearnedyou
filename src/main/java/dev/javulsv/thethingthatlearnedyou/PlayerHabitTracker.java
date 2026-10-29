@@ -2,7 +2,6 @@ package dev.javulsv.thethingthatlearnedyou;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.InteractionResult;
@@ -22,7 +21,7 @@ public final class PlayerHabitTracker {
 
     public static void register() {
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-            if (world.isClientSide || player.isSpectator()) {
+            if (world.isClientSide() || player.isSpectator()) {
                 return;
             }
 
@@ -41,9 +40,6 @@ public final class PlayerHabitTracker {
             if (state.is(Blocks.CHEST) || state.is(Blocks.TRAPPED_CHEST)) {
                 memoryFor(player.getUUID()).record(
                         PlayerHabitMemory.Habit.OPENING_CHEST, world.getGameTime());
-            } else if (state.is(Blocks.TORCH) || state.is(Blocks.WALL_TORCH)) {
-                // Looking at or using an existing torch is not the same as placing one.
-                // Placement is intentionally not inferred from this callback.
             }
 
             return InteractionResult.PASS;
