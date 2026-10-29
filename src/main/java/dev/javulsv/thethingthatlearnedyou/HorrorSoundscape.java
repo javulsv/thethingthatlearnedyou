@@ -53,10 +53,10 @@ public final class HorrorSoundscape {
             case 0 -> level.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.AMBIENT_CAVE, SoundSource.AMBIENT, 0.45F, 0.7F + RANDOM.nextFloat() * 0.2F);
             case 1 -> level.playSound(null, x, y, z,
-                    SoundEvents.STONE_STEP, SoundSource.AMBIENT, 0.22F, 0.55F + RANDOM.nextFloat() * 0.15F);
+                    SoundEvents.BLOCK_STONE_STEP, SoundSource.AMBIENT, 0.22F, 0.55F + RANDOM.nextFloat() * 0.15F);
             default -> level.playSound(null,
                     player.getX() + lookBehind.x * 3.0, player.getY(), player.getZ() + lookBehind.z * 3.0,
-                    SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.AMBIENT, 0.12F, 0.45F);
+                    SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundSource.AMBIENT, 0.12F, 0.45F);
         }
     }
 }
