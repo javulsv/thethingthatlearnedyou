@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "thethingthatlearnedyou",
+  "version": "${version}",
+  "name": "The Thing That Learned You",
+  "description": "A slow-burn psychological horror mod where the world begins to imitate you.",
+  "authors": ["javulsv"],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": { "main": ["dev.javulsv.thethingthatlearnedyou.TheThingThatLearnedYou"] },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
