@@ -1,7 +1,6 @@
 package dev.javulsv.thethingthatlearnedyou;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -55,7 +54,7 @@ public final class HorrorSoundscape {
             case 1 -> level.playSound(null, x, y, z,
                     SoundEvents.BLOCK_STONE_STEP, SoundSource.AMBIENT, 0.22F, 0.55F + RANDOM.nextFloat() * 0.15F);
             default -> level.playSound(null, player.getX() + lookBehind.x * 3.0, player.getY(), player.getZ() + lookBehind.z * 3.0,
-                    SoundEvents.ENTITY_ENDERMAN_STARE, SoundSource.AMBIENT, 0.18F, 0.65F);
+                    SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundSource.AMBIENT, 0.12F, 0.45F);
         }
     }
 }
