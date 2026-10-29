@@ -11,6 +11,7 @@ public final class TheThingThatLearnedYou implements ModInitializer {
     @Override
     public void onInitialize() {
         HorrorSoundscape.register();
+        PlayerHabitTracker.register();
         LOGGER.info("The Thing That Learned You is watching.");
     }
 }
