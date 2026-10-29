@@ -15,4 +15,9 @@ The goal is slow-burn horror: the world subtly changes, strange structures echo 
 
 Run `gradle build`. The mod JAR will be in `build/libs/`.
 
-This is the initial scaffold. Gameplay systems and custom assets still need to be implemented and tested.
+## Current implementation status
+
+- Initial server-side soundscape prototype: occasional cave ambience, a distant stone-step cue, or a quiet Enderman sound in the Overworld.
+- Per-player cooldowns keep the cues infrequent; sleeping players and spectators are skipped.
+- Sound cues currently reuse vanilla sounds. Original `.ogg` assets, the Watcher entity, world changes, and gameplay escalation are not implemented yet.
+- The soundscape prototype still needs a successful automated build and in-game testing before it can be called playable.
