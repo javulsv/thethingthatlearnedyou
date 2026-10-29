@@ -7,9 +7,11 @@
   "authors": ["javulsv"],
   "license": "All-Rights-Reserved",
   "environment": "*",
-  "entrypoints": { "main": ["dev.javulsv.thethingthatlearnedyou.TheThingThatLearnedYou"] },
+  "entrypoints": {
+    "main": ["dev.javulsv.thethingthatlearnedyou.TheThingThatLearnedYou"]
+  },
   "depends": {
-    "fabricloader": ">=0.18.4",
+    "fabricloader": ">=0.19.5",
     "minecraft": "26.1.2",
     "java": ">=25",
     "fabric-api": "*"
