@@ -32,7 +32,7 @@ public final class PlayerHabitTracker {
         });
 
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
-            if (world.isClientSide || player.isSpectator()) {
+            if (world.isClientSide() || player.isSpectator()) {
                 return InteractionResult.PASS;
             }
 
