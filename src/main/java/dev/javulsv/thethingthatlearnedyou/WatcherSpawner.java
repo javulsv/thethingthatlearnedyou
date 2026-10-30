@@ -7,7 +7,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.Heightmap;
+import net.minecraft.world.level.levelgen.Heightmap;
 
 /**
  * Rare, bounded Watcher spawning. The dimension check is intentional:
@@ -111,7 +111,7 @@ public final class WatcherSpawner {
         }
 
         WatcherEntity watcher = new WatcherEntity(WatcherEntities.WATCHER, level);
-        watcher.moveTo(spawnX, spawnY, spawnZ, random.nextFloat() * 360.0F, 0.0F);
+        watcher.snapTo(spawnX, spawnY, spawnZ, random.nextFloat() * 360.0F, 0.0F);
         watcher.setPersistenceRequired();
         level.addFreshEntity(watcher);
     }
