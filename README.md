@@ -21,7 +21,10 @@ Run `gradle build`. The mod JAR will be in `build/libs/`.
 - Per-player cooldowns keep the cues infrequent; sleeping players and spectators are skipped.
 - Habit-memory groundwork records repeated stone/deepslate mining and chest interaction per player; recent observations can be ranked for future imitation behavior.
 - A `thethingthatlearnedyou:fake_overworld` dimension data file points at vanilla Overworld terrain settings and biomes, with a `Fake Overworld` translation key. It is only a scaffold: automatic player routing, reliable menu integration, and subtle terrain anomalies are not implemented yet.
-- Habit tracking is not yet connected to a Watcher AI, and torch placement/building are not yet observed.
-- Original `.ogg` assets, the Watcher entity, safe world interactions, head-twitch animation, and gameplay escalation are not implemented yet.
+- The first Watcher entity is now registered as a stationary, passive humanoid observer. It stares at nearby players, is removed when approached, and receives rare head-only twitch movements when viewed from a distance.
+- The Watcher spawner checks for the custom Fake Overworld dimension key and never spawns in the normal Overworld. Spawns are deliberately rare and do not force-load chunks.
+- The first renderer reuses Minecraft's full zombie model hierarchy so the head, torso, arms, and legs remain connected. It uses a muted vanilla zombie texture tint for this prototype.
+- The Watcher does not yet imitate mining or chest interactions. It also does not yet have a custom texture or custom audio.
+- The subtle Fake Overworld terrain anomalies and complete menu/entry integration are not implemented yet.
 - The build workflow validates JSON, compiles the mod, checks that the installable JAR contains a valid `fabric.mod.json`, and uploads the JAR as an artifact.
-- The current code still needs a successful automated build and in-game testing before it can be called playable.
+- A successful build and in-game test are still required before calling this version playable.
