@@ -10,6 +10,8 @@ public final class TheThingThatLearnedYou implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        WatcherEntities.register();
+        WatcherSpawner.register();
         HorrorSoundscape.register();
         PlayerHabitTracker.register();
         LOGGER.info("The Thing That Learned You is watching.");
